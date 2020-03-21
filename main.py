@@ -2,7 +2,7 @@ import csv
 from moviedatascrapper import GetScrappedData
 from moviedatascrapper import GetTitleRow
 import scanpage
-moviedata_csv_file = open('moviedata.csv', 'w+', newline='', encoding="utf-8")
+moviedata_csv_file = open('moviedata.csv', 'a+', newline='', encoding="utf-8")
 writer = csv.writer(moviedata_csv_file)
 
 
@@ -22,8 +22,8 @@ def Scrap(start, end):
 
 
 def main():
-    start = int(input("Starting Index:"))
-    end = int(input("Ending Index:"))
+    start = int(input("Starting Index: "))
+    end = int(input("Ending Index: "))
     Scrap(start, end)
 
 
